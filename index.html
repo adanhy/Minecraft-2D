@@ -4,16 +4,84 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>minecraft</title>
+    <title>Minecraft 2D</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./index.js" defer></script>
   </head>
   <body>
+    <div id="landing">
+      <button id="start-button">Start Game</button>
+      <div class="instructions-box">
+        <div class="startline">
+          Use:
+          <img class="toolicon" src=".//media/tools/Axe.gif" alt="axe icon" />
+          for:
+          <img class="icon" src="./media/blocks/wood.png" alt="wood icon" /> &
+          <img
+            class="icon"
+            src="./media/blocks/tree-leaves.png"
+            alt="tree leaves icon"
+          />
+        </div>
+        <div class="startline">
+          Use:
+          <img
+            class="toolicon"
+            src=".//media/tools/Pickaxe.gif"
+            alt="pickaxe icon"
+          />
+          for:
+          <img class="icon" src="./media/blocks/rock.png" alt="rock icon" />
+        </div>
+        <div class="startline">
+          Use:
+          <img
+            class="toolicon"
+            src=".//media/tools/shovel.gif"
+            alt="axe icon"
+          />
+          for:
+          <img class="icon" src="./media/blocks/grass.png" alt="wood icon" /> &
+          <img
+            class="icon"
+            src="./media/blocks/soil.jpg"
+            alt="tree leaves icon"
+          />
+        </div>
+        <div class="startline">
+          Also try :
+          <img class="toolicon" src="./media/tools/wand.png" alt="wand icon" />
+        </div>
+      </div>
+      <div class="startline"></div>
+      <div class="startline"></div>
+    </div>
     <div id="wrapper">
-      <div id="navbar">navbar</div>
+      <div id="navbar">
+        <div>
+          <div id="selblo"></div>
+        </div>
+        <div class="tool wand"></div>
+        <div class="tool pickaxe"></div>
+        <div class="tool shovel"></div>
+        <div class="tool axe"></div>
+
+        <button id="restart-button">restart</button>
+      </div>
       <div id="world-window">
         <div id="world-tabel"></div>
+        <div id="bottom">
+          <div id="inventory">
+            <div id="inv-box"></div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

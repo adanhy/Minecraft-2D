@@ -2,6 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+}
+
+.honey {
+  background: url("../media/honey.png") no-repeat center center/cover;
+}
+
+.fire {
+  background: url("../media/fire.png") no-repeat center center/cover;
 }
 
 #world-window {
@@ -14,8 +23,122 @@
   border-spacing: 0;
 }
 
+#landing {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background: url("../media/Landing.jpg") no-repeat center center/cover;
+}
+
+#selblo {
+  border: 1px solid brown;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.startline {
+  margin: 0.5rem;
+}
+
+.marginbottom {
+  margin-bottom: 5rem;
+}
+
+.instructions-box {
+  background: rgba(54, 51, 51, 0.5);
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+#start-button {
+  padding: 2rem;
+  width: 20rem;
+  height: 5rem;
+  background: url("../media/button-texture.jpeg");
+}
+
+#start-button:hover {
+  opacity: 70%;
+}
+
 #navbar {
-  height: 4rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: url("../media/top-bg.png");
+}
+
+.selected-block {
+  width: 2rem;
+  height: 2rem;
+}
+
+.tool {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 5rem;
+}
+
+.toolicon {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 1rem;
+}
+
+.shovel {
+  background: url("../media/tools/shovel.gif") no-repeat center center/cover;
+}
+
+.shovel::after {
+  position: relative;
+  top: -1rem;
+  left: -1rem;
+  content: "SHOVEL";
+}
+.axe::after {
+  position: relative;
+  top: -1rem;
+  content: "AXE";
+}
+.pickaxe::after {
+  position: relative;
+  top: -1rem;
+  left: -2rem;
+  content: "PICKAXE";
+}
+.axe {
+  background: url("../media/tools/Axe.gif") no-repeat center center/cover;
+}
+.pickaxe {
+  background: url("../media/tools/Pickaxe.gif") no-repeat center center/cover;
+}
+
+.wand {
+  background: url("../media/tools/wand.png") no-repeat center center/cover;
+}
+.wand::after {
+  position: relative;
+  top: -1rem;
+  /* left: -rem; */
+  content: "WAND";
+}
+
+#restart-button {
+  width: 10rem;
+  height: 2rem;
+  background: url("../media/button-texture.jpeg");
+  margin-left: 2rem;
+  /* justify-self: start; */
 }
 
 .row {
@@ -62,4 +185,28 @@
 }
 .wood {
   background: url("../media/blocks/wood.png") no-repeat center center/cover;
+}
+
+#bottom {
+  width: 100%;
+  height: 6rem;
+  background: url("../media/bg-bottom.jpg");
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectedt {
+  border: 2px solid brown;
+}
+
+#inv-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.selecter-inv {
+  border: 1px solid brown;
 }
