@@ -1,2 +1,1 @@
-# Minecraft-Sandbox
-Minecraft Sandbox mode
+# Minecraft 2D
