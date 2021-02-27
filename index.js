@@ -50,7 +50,7 @@ function updateInv() {
     const [key, value] = ent;
     if (value != 0) {
       let inv = document.createElement(`div`);
-      inv.classList.add(`icon`);
+      inv.classList.add(`block`);
 
       inv.classList.add(key);
       let lbl = document.createElement("label");
@@ -66,7 +66,6 @@ function addToInv(item, e) {
   minedBlocks[item] = minedBlocks[item] + 1 || 1;
   e.target.className = `empty block`;
   updateInv();
-  console.log(minedBlocks);
 }
 
 function setEventListeners() {
@@ -92,19 +91,14 @@ function setEventListeners() {
 
   allblocks.forEach((v) => {
     v.addEventListener(`click`, (e) => {
-      console.log(e.target);
-
       if (
         document.querySelector(`.selectedt`) === document.querySelector(`.wand`)
       ) {
         e.target.className = `empty block`;
-        console.log(`wand used`);
       }
       if (
         document.querySelector(`.selectedt`) === document.querySelector(`.axe`)
       ) {
-        console.log(`axe used`);
-
         if (e.target.classList.contains(`wood`)) {
           addToInv(`wood`, e);
           e.target.className = `empty block`;
@@ -117,8 +111,6 @@ function setEventListeners() {
         document.querySelector(`.selectedt`) ===
         document.querySelector(`.pickaxe`)
       ) {
-        console.log(`pickaxe used`);
-
         if (e.target.classList.contains(`rock`)) {
           addToInv(`rock`, e);
         }
@@ -127,8 +119,6 @@ function setEventListeners() {
         document.querySelector(`.selectedt`) ===
         document.querySelector(`.shovel`)
       ) {
-        console.log(`shovel used`);
-
         if (e.target.classList.contains(`grass`)) {
           addToInv(`grass`, e);
         }
@@ -138,9 +128,10 @@ function setEventListeners() {
         }
       }
 
-      if (document.querySelector(`.selecter-inv`)) {
-        console.log(`trying`);
-        console.log(e);
+      if (
+        document.querySelector(`.selecter-inv`) &&
+        e.target.classList.contains(`empty`)
+      ) {
         e.target.className = document.querySelector(`.selecter-inv`).className;
         e.target.classList.remove(`selecter-inv`);
 
@@ -151,7 +142,7 @@ function setEventListeners() {
           updateInv();
         }
         if (
-          document.querySelector(`.selecter-inv`).classList.contains(`rock`)
+          document.querySelector(`.selecter-inv`).classList.contains("rock")
         ) {
           minedBlocks.rock = minedBlocks.rock - 1;
           updateInv();
